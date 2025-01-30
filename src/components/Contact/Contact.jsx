@@ -17,6 +17,7 @@ const ContactForm = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const obaseUri = JSON.parse(JSON.stringify(link));
   const baseUri = obaseUri.DefaultbaseUri;
+  const sitePlaceholder = obaseUri.sitePlaceholder;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -73,7 +74,7 @@ const ContactForm = () => {
       <Helmet>
         <title>Contact Us | Free WhatsApp Group Links & Promo</title>
         <meta property="og:title" content="Contact Us | Free WhatsApp Group Links & Promo | Join Indian & Girls WhatsApp Groups"/>
-        <meta property="og:site_name" content="Group Godown"/>
+        <meta property="og:site_name" content={sitePlaceholder}/>
         <meta property="og:url" content={baseUri}/>
         <meta property="og:description" content="Join the best WhatsApp groups to connect with like-minded people! Discover how to promote your WhatsApp group and increase group members easily. Explore top groups today!" />
         <meta property="og:type" content="website"/>

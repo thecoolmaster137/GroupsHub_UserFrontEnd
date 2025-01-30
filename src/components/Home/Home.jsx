@@ -244,7 +244,7 @@ export default function Home() {
       <Helmet>
         <title>Join Unlimited WhatsApp groups | WA group links | {sitePlaceholder}</title>
         <meta property="og:title" content={`Join Unlimited WhatsApp groups | WA group links | ${sitePlaceholder}`} />
-        <meta property="og:site_name" content="Group Godown"/>
+        <meta property="og:site_name" content={sitePlaceholder}/>
         <meta property="og:url" content={baseUri}/>
         <meta property="og:description" content="Join the best WhatsApp groups to connect with like-minded people! Discover how to promote your WhatsApp group and increase group members easily. Explore top groups today!" />
         <meta property="og:type" content="website"/>
@@ -778,7 +778,7 @@ export default function Home() {
         </header>
         <section className="intro-section">
           <p>
-            Group Godown is the perfect place to find out active WhatsApp groups from around the world.
+            {sitePlaceholder} is the perfect place to find out active WhatsApp groups from around the world.
             Whether you’re interested in general WhatsApp groups, Girls WhatsApp groups, or Indian groups, we’ve got you covered.
             Explore and join groups that match your interests, such as Share market WhatsApp group discussions, earning opportunities, 
             YouTube subscribe WhatsApp group, and more.

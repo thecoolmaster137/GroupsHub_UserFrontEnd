@@ -16,6 +16,7 @@ function GroupInvite() {
 
   const obaseUri = JSON.parse(JSON.stringify(link));
   const baseUri = obaseUri.DefaultbaseUri;
+  const sitePlaceholder = obaseUri.sitePlaceholder;
   const defualtgroupImg = obaseUri.defaultgroupImg;
 
   const { data: singlegroup } = useDataFetch(`${baseUri}api/Groups/` + id, []);
@@ -127,7 +128,7 @@ function GroupInvite() {
        <Helmet>
         <title>{singlegroup.groupName}</title>
         <meta property="og:title" content={singlegroup.groupName} />
-        <meta property="og:site_name" content="Group Godown" />
+        <meta property="og:site_name" content={sitePlaceholder}/>
         <meta property="og:url" content={window.location.href} />
         <meta property="og:type" content="website" />
         <meta

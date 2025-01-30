@@ -20,7 +20,7 @@ function JoinGroup() {
       <Helmet>
         <title>WhatsApp Group Links | Join Indian & Girls WhatsApp Groups | {domainName}</title>
         <meta property="og:title" content="WhatsApp Group Links | Join Indian & Girls WhatsApp Groups"/>
-        <meta property="og:site_name" content="Group Godown"/>
+        <meta property="og:site_name" content={sitePlaceholder}/>
         <meta property="og:url" content={baseUri}/>
         <meta property="og:description" content="Join the best WhatsApp groups to connect with like-minded people! Discover how to promote your WhatsApp group and increase group members easily. Explore top groups today!" />
         <meta property="og:type" content="website"/>

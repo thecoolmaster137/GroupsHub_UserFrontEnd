@@ -13,6 +13,7 @@ function AddGroup() {
   const langData = JSON.parse(JSON.stringify(languagesData));
   const baseUri = obaseUri.DefaultbaseUri;
   const countryUri = obaseUri.countryUri;
+  const sitePlaceholder = obaseUri.sitePlaceholder;
   const navigate = useNavigate(); // Initialize useHistory
 
 
@@ -149,7 +150,7 @@ function AddGroup() {
         <title>Add WhatsApp Group Links | Promote & Increase Members</title>
 
         <meta property="og:title" content="Add WhatsApp Group Links | Promote & Increase Members"/>
-        <meta property="og:site_name" content="Group Godown"/>
+        <meta property="og:site_name" content={sitePlaceholder}/>
         <meta property="og:url" content={baseUri}/>
         <meta property="og:description" content="Join the best WhatsApp groups to connect with like-minded people! Discover how to promote your WhatsApp group and increase group members easily. Explore top groups today!" />
         <meta property="og:type" content="website"/>
@@ -349,9 +350,9 @@ function AddGroup() {
           also get WhatsApp Group invite to connect with people around the
           world.
         </p>
-        <h3>Why choose Group Godown?</h3>
+        <h3>Why choose {sitePlaceholder}?</h3>
         <p>
-          Group Godown makes it easy for you to{" "}
+          {sitePlaceholder} makes it easy for you to{" "}
           <a href={baseUri}><span className="text-success"> Join WhatsApp Groups</span></a>, and
           Increase group members. Our site makes it easy to find and share
           groups that are active and interesting.
@@ -454,7 +455,7 @@ function AddGroup() {
             can Increase group members.
           </li>
         </ul>
-        <h3>Group Godown keeps you updated with the latest news:</h3>
+        <h3>{sitePlaceholder} keeps you updated with the latest news:</h3>
         <p>
           Our group listings are always updated to ensure you have the most
           active and best groups. Visit us often to see the latest WhatsApp
@@ -462,7 +463,7 @@ function AddGroup() {
           <span className="text-success"> WhatsApp Group Link</span>.
         </p>
         <p className="fst-italic fw-bold">
-          Group Godown is your one-stop shop for all the best WhatsApp groups in
+          {sitePlaceholder} is your one-stop shop for all the best WhatsApp groups in
           the world.
         </p>
       </div>

@@ -7,6 +7,7 @@ import link from "../../../link.json";
 const obaseUri = JSON.parse(JSON.stringify(link));
 const baseUri = obaseUri.DefaultbaseUri;
 const domainName = obaseUri.domainName;
+const sitePlaceholder = obaseUri.sitePlaceholder;
 
 export default function FAQ() {
   return (
@@ -15,7 +16,7 @@ export default function FAQ() {
       <Helmet>
         <title>FAQ | Join & Promote WhatsApp Group Links | {domainName}</title>
         <meta property="og:title" content={`FAQ | Join & Promote WhatsApp Group Links | ${domainName} | Join Indian & Girls WhatsApp Groups`} />
-        <meta property="og:site_name" content="Group Godown"/>
+        <meta property="og:site_name" content={sitePlaceholder}/>
         <meta property="og:url" content={baseUri}/>
         <meta property="og:description" content="Join the best WhatsApp groups to connect with like-minded people! Discover how to promote your WhatsApp group and increase group members easily. Explore top groups today!" />
         <meta property="og:type" content="website"/>
@@ -46,7 +47,7 @@ export default function FAQ() {
                   aria-expanded="true"
                   aria-controls="panelsStayOpen-collapseOne"
                 >
-                  What is Group Godown?
+                  What is {sitePlaceholder}?
                 </button>
               </h2>
               <div
@@ -54,7 +55,7 @@ export default function FAQ() {
                 className="accordion-collapse collapse show"
               >
                 <div className="accordion-body">
-                  Group Godown is a website where you can find and join various
+                  {sitePlaceholder} is a website where you can find and join various
                   online groups, including{" "}
                   <strong>
                    <a href={baseUri}>WhatsApp group links</a>, Girls WhatsApp group links
@@ -81,7 +82,7 @@ export default function FAQ() {
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseTwo"
                 >
-                  How do I join a group on Group Godown?
+                  How do I join a group on {sitePlaceholder}?
                 </button>
               </h2>
               <div
@@ -110,7 +111,7 @@ export default function FAQ() {
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseThree"
                 >
-                  How can I submit my group link to Group Godown?
+                  How can I submit my group link to {sitePlaceholder}?
                 </button>
               </h2>
               <div
@@ -151,7 +152,7 @@ export default function FAQ() {
               >
                 <div className="accordion-body">
                   <strong>No, <a href= {`${baseUri}addgroup/`}>joining WhatsApp groups</a> </strong> or submitting
-                  group links to Group Godown is completely free. We also offer
+                  group links to {sitePlaceholder} is completely free. We also offer
                   <strong><a href= {`${baseUri}addgroup/`}>free WhatsApp group promotion</a> </strong> for your
                   convenience.
                 </div>
@@ -222,7 +223,7 @@ export default function FAQ() {
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseSeven"
                 >
-                  How can I contact the Group Godown support team?
+                  How can I contact the {sitePlaceholder} support team?
                 </button>
               </h2>
               <div
@@ -271,7 +272,7 @@ export default function FAQ() {
                   aria-expanded="false"
                   aria-controls="panelsStayOpen-collapseNine"
                 >
-                  Can I advertise on Group Godown?
+                  Can I advertise on {sitePlaceholder}?
                 </button>
               </h2>
               <div

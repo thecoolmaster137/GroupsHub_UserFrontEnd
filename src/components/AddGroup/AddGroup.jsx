@@ -150,14 +150,14 @@ function AddGroup() {
 
         <meta property="og:title" content="Add WhatsApp Group Links | Promote & Increase Members"/>
         <meta property="og:site_name" content="Group Godown"/>
-        <meta property="og:url" content="https://www.groupgodown.com/"/>
+        <meta property="og:url" content={baseUri}/>
         <meta property="og:description" content="Join the best WhatsApp groups to connect with like-minded people! Discover how to promote your WhatsApp group and increase group members easily. Explore top groups today!" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content={metaImage}></meta>
         <meta property="og:locale" content="en_US" />
         <meta name="description" content="Submit WhatsApp group invites for free promo! Boost group link visibility, promote your group, and increase members effortlessly." />
         <meta name="keywords" content="Add WhatsApp Group Links, Submit WhatsApp Group Invites, Promote WhatsApp Group, Free WhatsApp Group Promo tool, WhatsApp Group link visibility, Increase Group Members" />
-        <link rel="canonical" href="https://www.groupgodown.com/addgroup/" />
+        <link rel="canonical" href={`${baseUri}addgroup/`} />
         <meta
           name="google-site-verification"
           content="zqo3k0SHL5mAOnoSgEDnirh5Pf53vEmkczx2967yUEM"
@@ -352,7 +352,7 @@ function AddGroup() {
         <h3>Why choose Group Godown?</h3>
         <p>
           Group Godown makes it easy for you to{" "}
-          <a href="https://www.groupgodown.com/"><span className="text-success"> Join WhatsApp Groups</span></a>, and
+          <a href={baseUri}><span className="text-success"> Join WhatsApp Groups</span></a>, and
           Increase group members. Our site makes it easy to find and share
           groups that are active and interesting.
         </p>
@@ -382,7 +382,7 @@ function AddGroup() {
             <span className="text-success"> India WhatsApp group link</span>.
             Our site allows you to find groups based on your interests, from
             
-            <a href="https://www.groupgodown.com/">
+            <a href={baseUri}>
               <span className="text-success">
                 {" "}
                 Indian WhatsApp Group Link
@@ -390,12 +390,12 @@ function AddGroup() {
             </a>
             
             through{" "}
-            <a href="https://www.groupgodown.com/">
+            <a href={baseUri}>
               {" "}
               Share market WhatsApp Group Link
             </a>
             . Join a{" "}
-            <a href="https://www.groupgodown.com/"><span className="text-success">WhatsApp Earning Group</span></a>
+            <a href={baseUri}><span className="text-success">WhatsApp Earning Group</span></a>
             or{" "}
             <span className="text-success"> WP Group link</span> that suits your
             interests.
@@ -410,7 +410,7 @@ function AddGroup() {
             Join group for girls to chat, connect and share.
           </li>
           <li>
-            <a href="https://www.groupgodown.com/">
+            <a href={baseUri}>
               <span className="fw-bold text-success">
                 Indian WhatsApp Group Link :
               </span>{" "}
@@ -441,7 +441,7 @@ function AddGroup() {
             <span className="text-success">
               Share Market WhatsApp Group Link
             </span>
-            " ,<a href="https://www.groupgodown.com/">Girls WhatsApp Group Link</a>
+            " ,<a href={baseUri}>Girls WhatsApp Group Link</a>
             .
           </li>
           <li>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import "./Contact.css";
 import metaImage from "../data/ggLogo.jpeg"
+import link from "../../../link.json";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +15,8 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  const obaseUri = JSON.parse(JSON.stringify(link));
+  const baseUri = obaseUri.DefaultbaseUri;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -71,14 +74,14 @@ const ContactForm = () => {
         <title>Contact Us | Free WhatsApp Group Links & Promo</title>
         <meta property="og:title" content="Contact Us | Free WhatsApp Group Links & Promo | Join Indian & Girls WhatsApp Groups"/>
         <meta property="og:site_name" content="Group Godown"/>
-        <meta property="og:url" content="https://www.groupgodown.com/"/>
+        <meta property="og:url" content={baseUri}/>
         <meta property="og:description" content="Join the best WhatsApp groups to connect with like-minded people! Discover how to promote your WhatsApp group and increase group members easily. Explore top groups today!" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content={metaImage}></meta>
         <meta property="og:locale" content="en_US" />
         <meta name="description" content="Get in touch with us to add WhatsApp group links, submit invites, and promote groups. Increase group members, share market, YouTube, and girls WhatsApp groups." />
         <meta name="keywords" content="Free WhatsApp Group Promo, Add WhatsApp Group Links, Increase WhatsApp Group Members." />
-        <link rel="canonical" href="https://www.groupgodown.com/contact/" />
+        <link rel="canonical" href={`${baseUri}contact/`}/>
       </Helmet>
       <div className="contact-outer-div">
         <div className="contact-main-div">

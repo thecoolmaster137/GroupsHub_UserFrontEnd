@@ -2,22 +2,29 @@ import React from "react";
 import "./Privacy.css";
 import { Helmet } from "react-helmet-async";
 import metaImage from "../data/ggLogo.jpeg"
+import link from "../../../link.json";
+
+const obaseUri = JSON.parse(JSON.stringify(link));
+const domainName = obaseUri.domainName;
+const baseUri = obaseUri.DefaultbaseUri;
+const sitePlaceholder = obaseUri.sitePlaceholder;
+
 export default function Privacy() {
   return (
 
     <>
       <Helmet>
-          <title>Privacy Policy | WhatsApp Group Links & Promotion | groupgodown.com</title>
-          <meta property="og:title" content="Privacy Policy | WhatsApp Group Links & Promotion | groupgodown.com | Join Indian & Girls WhatsApp Groups"/>
+          <title>Privacy Policy | WhatsApp Group Links & Promotion | {domainName}</title>
+          <meta property="og:title" content={`Privacy Policy | WhatsApp Group Links & Promotion | ${domainName} | Join Indian & Girls WhatsApp Groups`}/>
           <meta property="og:site_name" content="Group Godown"/>
-          <meta property="og:url" content="https://www.groupgodown.com/"/>
+          <meta property="og:url" content={baseUri}/>
           <meta property="og:description" content="Join the best WhatsApp groups to connect with like-minded people! Discover how to promote your WhatsApp group and increase group members easily. Explore top groups today!" />
           <meta property="og:type" content="website"/>
           <meta property="og:image" content={metaImage}></meta>
           <meta property="og:locale" content="en_US" />
           <meta name="description" content="Learn how we safeguard your data while you add, promote, and join WhatsApp groups, including earning, share market, girls’ groups, and YouTube subscribe links." />
           <meta name="keywords" content="Free WhatsApp Group Promo, Add WhatsApp Group Links, Increase WhatsApp Group Members, WhatsApp Earning Group, Join WhatsApp groups" />
-          <link rel="canonical" href="https://www.groupgodown.com/privacy/" />
+          <link rel="canonical" href= {`${baseUri}privacy/`}/>
           {/* <!-- Google tag (gtag.js) --> */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSB821HQC6"></script>
       </Helmet>
@@ -113,7 +120,7 @@ export default function Privacy() {
           </p>
           <h5>Changes to Our Privacy Policy</h5>
           <p>
-            GroupGodown.com may update this privacy statement from time to time.
+            {domainName} may update this privacy statement from time to time.
             The current version will always be posted here.
           </p>
           <h5>Consent</h5>

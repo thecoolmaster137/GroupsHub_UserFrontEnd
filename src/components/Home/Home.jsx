@@ -17,12 +17,13 @@ export default function Home() {
   const searchParams = new URLSearchParams(location.search);
   const searchQuery = searchParams.get('search') || '';
 
-
   const obaseUri = JSON.parse(JSON.stringify(link));
   const baseUri = obaseUri.DefaultbaseUri;
   const countryUri = obaseUri.countryUri;
   const langData = JSON.parse(JSON.stringify(languagesData));
   const defualtgroupImg = obaseUri.defaultgroupImg;
+  const domainName = obaseUri.domainName;
+  const sitePlaceholder = obaseUri.sitePlaceholder;;
 
   const { data: apiResponse, loading: countriesLoading } = useDataFetch(
     countryUri,
@@ -241,18 +242,18 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Join Unlimited WhatsApp groups | WA group links | groupgodown</title>
-        <meta property="og:title" content="Join Unlimited WhatsApp groups | WA group links | groupgodown"/>
+        <title>Join Unlimited WhatsApp groups | WA group links | {sitePlaceholder}</title>
+        <meta property="og:title" content={`Join Unlimited WhatsApp groups | WA group links | ${sitePlaceholder}`} />
         <meta property="og:site_name" content="Group Godown"/>
-        <meta property="og:url" content="https://www.groupgodown.com/"/>
+        <meta property="og:url" content={baseUri}/>
         <meta property="og:description" content="Join the best WhatsApp groups to connect with like-minded people! Discover how to promote your WhatsApp group and increase group members easily. Explore top groups today!" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content={metaImage}></meta>
         <meta property="og:locale" content="en_US" />
-        <meta name="description" content="Explore a wide range of WhatsApp group links on groupgodown.com, including Girls WhatsApp groups, Indian groups, share market groups, and more. Join and connect with like-minded individuals across the World." />
+        <meta name="description" content={`Explore a wide range of WhatsApp group links on ${domainName}, including Girls WhatsApp groups, Indian groups, share market groups, and more. Join and connect with like-minded individuals across the World.`} />
 	      <meta name="keywords" content="WhatsApp group link, Girls WhatsApp group link, WhatsApp group link girl India, India WhatsApp group link, Indian WhatsApp group link, Join WhatsApp group, Share market WhatsApp group link, WP group link, WhatsApp earning group, YouTube subscribe WhatsApp group" />
         <meta name="google-site-verification" content="zqo3k0SHL5mAOnoSgEDnirh5Pf53vEmkczx2967yUEM" />
-        <link rel="canonical" href=" https://www.groupgodown.com/" />
+        <link rel="canonical" href={baseUri} />
       </Helmet>
 
       <div className="home-main-div">
@@ -276,12 +277,6 @@ export default function Home() {
               }}
             >
               <option>Any Category</option>
-              {/* {categories.map((category) => (
-                <option key={category.id} value={category.id}>
-                  {category.name}
-                </option>
-              ))} */}
-
               {categories
                 .sort((a, b) => a.name.localeCompare(b.name)) // Sort categories alphabetically
                 .map((category) => (
@@ -772,70 +767,14 @@ export default function Home() {
             </li>
           </ul>
         </nav>
-        {/* // Final */}
-
-        {/* // Newest Page navbar */}
       </div>
-      {/* <div className="home-main-div">
-      <div className="card_w">
-        <div className="card-body">
-          <div className="homepage-container">
-            <header>
-              <h1>Join the Best WhatsApp Groups in India, USA, and Worldwide | GroupGodown.com</h1>
-            </header>
-            <section className="intro-section">
-              <p>
-                Group Godown is the perfect place to find out active WhatsApp groups from around the world.
-                Whether you’re interested in general WhatsApp groups, Girls WhatsApp groups, or Indian groups, we’ve got you covered.
-                Explore and join groups that match your interests, such as Share market WhatsApp group discussions, earning opportunities, 
-                YouTube subscribe WhatsApp group, and more.
-              </p>
-            </section>
-            <section className="why-choose-us">
-              <h2>Why Choose Us?</h2>
-              <ul>
-                <li>
-                  <strong>Active Groups Only:</strong> We ensure that every group link listed is currently active. Deleted groups or revoked links are quickly removed.
-                  <br />
-                  (हम सुनिश्चित करते हैं कि सूचीबद्ध प्रत्येक समूह लिंक वर्तमान में सक्रिय है। हटाए गए समूह या निरस्त लिंक को तुरंत हटा दिया जाता है।)
-                </li>
-                <li>
-                  <strong>Easy Reporting:</strong> If you find any issues with the groups, such as deleted or revoked links, please report them to us.
-                  We will act quickly to resolve any problems and update the listings.
-                  <br />
-                  (यदि आपको समूहों में कोई समस्या मिलती है, जैसे कि हटाए गए या निरस्त किए गए लिंक, तो कृपया हमें इसकी रिपोर्ट करें। 
-                  हम किसी भी समस्या को हल करने और लिस्टिंग को अपडेट करने के लिए तुरंत कार्रवाई करेंगे।)
-                </li>
-              </ul>
-            </section>
-            <section className="how-it-works">
-              <h2>How It Works?</h2>
-              <ol>
-                <li>
-                  <strong>Search & Discover:</strong> Use our search function to find groups based on your interests or needs. Whether you’re looking for market discussions, 
-                  social groups, or specialized communities, we make it easy to discover what you’re looking for.
-                </li>
-                <li>
-                  <strong>Join & Engage:</strong> Once you find a group that suits your needs, simply click the link to join. Start engaging with like-minded individuals 
-                  and make the most of your WhatsApp experience.
-                </li>
-                <li>
-                  <strong>Stay Updated:</strong> Our team constantly monitors and updates the group listings to ensure you have access to the most active and relevant groups. 
-                  Check back regularly for new opportunities and groups.
-                </li>
-              </ol>
-            </section>
-          </div>
-        </div>
-      </div>
-    </div> */}
-
+     
 <div className="home-main-div">
   <div className="card_w">
     <div className="card-body">
       <div className="homepage-container">
         <header>
-          <h1>Join the Best WhatsApp Groups in India, USA, and Worldwide | GroupGodown.com</h1>
+          <h1>Join the Best WhatsApp Groups in India, USA, and Worldwide | {domainName}</h1>
         </header>
         <section className="intro-section">
           <p>
@@ -884,10 +823,10 @@ export default function Home() {
         <section className="enhance-promotion">
           <h2>Enhance Your WhatsApp Groups Free Promotion and Easy Link Sharing</h2>
           <p>
-            Our platform allows you to <a href="https://www.groupgodown.com/addgroup" >Add WhatsApp Group Links</a>, 
-            <a href="/addgroup">Submit WhatsApp Group</a> Invites, and easily <a href="https://www.groupgodown.com/addgroup">Promote WhatsApp Group</a> Activities. 
+            Our platform allows you to <a href={`${domain}addgroup`} >Add WhatsApp Group Links</a>, 
+            <a href="/addgroup">Submit WhatsApp Group</a> Invites, and easily <a href= {`${domain}addgroup`}>Promote WhatsApp Group</a> Activities. 
             Use our Free WhatsApp Group Promo tools to increase your WhatsApp Group link visibility. 
-            Create WhatsApp Group Links, <span style={{ color: 'red' }}>Join WhatsApp Groups, and <a href="https://www.groupgodown.com/addgroup">Increase Group Members</a>.</span> 
+            Create WhatsApp Group Links, <span style={{ color: 'red' }}>Join WhatsApp Groups, and <a href= {`${domain}addgroup`}>Increase Group Members</a>.</span> 
           </p>
         </section>
       </div>

@@ -3,6 +3,12 @@ import "./Home.css";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import metaImage from "../data/ggLogo.jpeg"
+import link from "../../../link.json";
+
+const obaseUri = JSON.parse(JSON.stringify(link));
+const domainName = obaseUri.domainName;
+const baseUri = obaseUri.DefaultbaseUri;
+const sitePlaceholder = obaseUri.sitePlaceholder;
 
 function JoinGroup() {
   let { grouplink } = useParams();
@@ -12,10 +18,10 @@ function JoinGroup() {
     <div className="d-flex justify-content-center ">
       
       <Helmet>
-        <title>WhatsApp Group Links | Join Indian & Girls WhatsApp Groups | groupgodown.com</title>
+        <title>WhatsApp Group Links | Join Indian & Girls WhatsApp Groups | {domainName}</title>
         <meta property="og:title" content="WhatsApp Group Links | Join Indian & Girls WhatsApp Groups"/>
         <meta property="og:site_name" content="Group Godown"/>
-        <meta property="og:url" content="https://www.groupgodown.com/"/>
+        <meta property="og:url" content={baseUri}/>
         <meta property="og:description" content="Join the best WhatsApp groups to connect with like-minded people! Discover how to promote your WhatsApp group and increase group members easily. Explore top groups today!" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content={metaImage}></meta>
@@ -26,17 +32,17 @@ function JoinGroup() {
       <div className="col-12 p-3">
         <div className="border border-3 bg-light p-4 rounded">
           <h4>You can find join button bellow</h4>
-          <h6>What is GroupGodown?</h6>
+          <h6>What is {sitePlaceholder}?</h6>
           <p>
-          GroupGodown is best whatsapp group link providing plateform where user
+          {sitePlaceholder} is best whatsapp group link providing plateform where user
             can promote their groups world widely and join many other groups. We
             have several group category like business, education, health,
             social, job, sports etc. We have large audience from country like
             India, USA, etc.
           </p>
-          <h6>Why GroupGodown?</h6>
+          <h6>Why {sitePlaceholder}?</h6>
           <p>
-          GroupGodown is provide 99.99% Active whatsapp group link. Our system
+          {sitePlaceholder} is provide 99.99% Active whatsapp group link. Our system
             will identify rekoved group link and remove them immediatly. No
             limit on adding and joining groups.
           </p>
@@ -46,9 +52,9 @@ function JoinGroup() {
             and fill other detail like country, category, language, tags and
             description. click here to publish new whatsapp group.
           </p>
-          <h6>How to remove your group from GroupGodown?</h6>
+          <h6>How to remove your group from {sitePlaceholder}?</h6>
           <p>
-            Open your group in GroupGodown and click on *Report this group link.
+            Open your group in {sitePlaceholder} and click on *Report this group link.
             choose one option and tell other detail like admin contact number.
           </p>
           <h6>What is Whatsapp?</h6>

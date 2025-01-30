@@ -2,22 +2,28 @@ import React from "react";
 import "./faq.css";
 import { Helmet } from "react-helmet-async";
 import metaImage from "../data/ggLogo.jpeg"
+import link from "../../../link.json";
+
+const obaseUri = JSON.parse(JSON.stringify(link));
+const baseUri = obaseUri.DefaultbaseUri;
+const domainName = obaseUri.domainName;
 
 export default function FAQ() {
   return (
     <>
+
       <Helmet>
-        <title>FAQ | Join & Promote WhatsApp Group Links | groupgodown.com</title>
-        <meta property="og:title" content="FAQ | Join & Promote WhatsApp Group Links | groupgodown.com | Join Indian & Girls WhatsApp Groups"/>
+        <title>FAQ | Join & Promote WhatsApp Group Links | {domainName}</title>
+        <meta property="og:title" content={`FAQ | Join & Promote WhatsApp Group Links | ${domainName} | Join Indian & Girls WhatsApp Groups`} />
         <meta property="og:site_name" content="Group Godown"/>
-        <meta property="og:url" content="https://www.groupgodown.com/"/>
+        <meta property="og:url" content={baseUri}/>
         <meta property="og:description" content="Join the best WhatsApp groups to connect with like-minded people! Discover how to promote your WhatsApp group and increase group members easily. Explore top groups today!" />
         <meta property="og:type" content="website"/>
         <meta property="og:image" content={metaImage}></meta>
         <meta property="og:locale" content="en_US" />
         <meta name="description" content="Get answers to all your queries on adding WhatsApp group links, promoting your group, increasing members, and joining various groups like YouTube, Share Market." />
         <meta name="keywords" content="Free WhatsApp Group Promo, Add WhatsApp Group Links, Increase WhatsApp Group Members, Join WhatsApp groups, Indian WhatsApp Group Link" />
-        <link rel="canonical" href="https://www.groupgodown.com/faq/" />
+        <link rel="canonical" href= {`${baseUri}faq/`}/>
         {/* <!-- Google tag (gtag.js) --> */}
         <script
           async
@@ -51,13 +57,13 @@ export default function FAQ() {
                   Group Godown is a website where you can find and join various
                   online groups, including{" "}
                   <strong>
-                   <a href="https://www.groupgodown.com/">WhatsApp group links</a>, Girls WhatsApp group links
+                   <a href={baseUri}>WhatsApp group links</a>, Girls WhatsApp group links
                   </strong>
                   , and many more. We help you connect with others who share
                   your interests through a wide variety of group links,
                   including{" "}
                   <strong>
-                    <a href="https://www.groupgodown.com/">Indian WhatsApp group links</a>, Share market WhatsApp group
+                    <a href={baseUri}>Indian WhatsApp group links</a>, Share market WhatsApp group
                     links
                   </strong>
                   , and more.
@@ -113,7 +119,7 @@ export default function FAQ() {
               >
                 <div className="accordion-body">
                   • Go to the “Add Group” section or page on our website to
-                  <strong> <a href="https://www.groupgodown.com/addgroup">submit your WhatsApp group link</a></strong> or any other
+                  <strong> <a href= {`${baseUri}addgroup/`}>submit your WhatsApp group link</a></strong> or any other
                   group.
                   <br />• Fill out the form with your group Link, Category,
                   Country, Language, Application Type (e.g.,{" "}
@@ -144,9 +150,9 @@ export default function FAQ() {
                 className="accordion-collapse collapse"
               >
                 <div className="accordion-body">
-                  <strong>No, <a href="https://www.groupgodown.com/addgroup">joining WhatsApp groups</a> </strong> or submitting
+                  <strong>No, <a href= {`${baseUri}addgroup/`}>joining WhatsApp groups</a> </strong> or submitting
                   group links to Group Godown is completely free. We also offer
-                  <strong><a href="https://www.groupgodown.com/addgroup">free WhatsApp group promotion</a> </strong> for your
+                  <strong><a href= {`${baseUri}addgroup/`}>free WhatsApp group promotion</a> </strong> for your
                   convenience.
                 </div>
               </div>
@@ -225,7 +231,7 @@ export default function FAQ() {
               >
                 <div className="accordion-body">
                   • Use the  <a href="/contact">Contact Us</a> page on our website.
-                  <br />• Email us at: contact@groupgodown.com.
+                  <br />• Email us at: contact@{domainName}.
                 </div>
               </div>
             </div>
@@ -276,7 +282,7 @@ export default function FAQ() {
                   Yes, we offer advertising options. For more details on
                   advertising with us, visit the "Contact Us" page or get in
                   touch with our support team. Email us at:
-                  contact@groupgodown.com.
+                  contact@{domainName}.
                 </div>
               </div>
             </div>

@@ -4,6 +4,7 @@
     "defaultgroupImg" : "/public/ggLogo.jpeg",
     "domainName" : "GroupsHub.com",
     "footerText" : "2025 GroupsHub",
-    "sitePlaceholder" : "GroupsHub"
+    "sitePlaceholder" : "GroupsHub",
+    "contactEmail": "contact@groupshub.com"
 }
 

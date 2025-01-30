@@ -33,10 +33,10 @@ export default function Privacy() {
         <div className="privacy-main-div">
           <h5>Privacy Policy</h5>
           <p>
-            At GroupGodown, we prioritize the protection of our visitors' privacy.
+            At {sitePlaceholder}, we prioritize the protection of our visitors' privacy.
             We are dedicated to preserving the privacy and confidentiality of the
             information gathered from our visitors and the use of that information
-            in accordance with GroupGodown's privacy principles. If you have any
+            in accordance with {sitePlaceholder}'s privacy principles. If you have any
             doubts or questions about this, please feel free to contact us.
           </p>
           <h5>Information Collection and Use</h5>
@@ -80,7 +80,7 @@ export default function Privacy() {
           </p>
           <h5>Third-Party Privacy Policies</h5>
           <p>
-            The privacy policy of GroupGodown does not apply to third-party
+            The privacy policy of {sitePlaceholder} does not apply to third-party
             advertisers or websites. Therefore, we advise users to consult the
             respective privacy policies of these third-party advertisers for more
             detailed information. Information about how to opt out of specific

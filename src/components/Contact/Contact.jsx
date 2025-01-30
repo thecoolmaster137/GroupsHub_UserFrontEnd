@@ -18,6 +18,7 @@ const ContactForm = () => {
   const obaseUri = JSON.parse(JSON.stringify(link));
   const baseUri = obaseUri.DefaultbaseUri;
   const sitePlaceholder = obaseUri.sitePlaceholder;
+  const contactEmail = obaseUri.contactEmail;
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

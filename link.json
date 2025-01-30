@@ -2,8 +2,8 @@
     "DefaultbaseUri" : "https://groupshub-api.onrender.com/",
     "countryUri" : "https://geodata.phplift.net/api/index.php?type=getCountries",
     "defaultgroupImg" : "/public/ggLogo.jpeg",
-    "domainName" : "Groupgodown.com",
-    "footerText" : "2025 GroupGodown",
-    "sitePlaceholder" : "Groupgodown"
+    "domainName" : "GroupsHub.com",
+    "footerText" : "2025 GroupsHub",
+    "sitePlaceholder" : "GroupsHub"
 }
 

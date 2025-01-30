@@ -88,7 +88,7 @@ const ContactForm = () => {
       <div className="contact-outer-div">
         <div className="contact-main-div">
           <h5>Contact Us</h5>
-          <p>Email : contact@groupgodown.com</p>
+          <p>Email : {contactEmail}</p>
           {error && <p className="error-message">{error}</p>}
           {successMessage && <p className="success-message">{successMessage}</p>}
           <form onSubmit={handleSubmit}>

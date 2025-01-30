@@ -823,10 +823,10 @@ export default function Home() {
         <section className="enhance-promotion">
           <h2>Enhance Your WhatsApp Groups Free Promotion and Easy Link Sharing</h2>
           <p>
-            Our platform allows you to <a href={`${domain}addgroup`} >Add WhatsApp Group Links</a>, 
-            <a href="/addgroup">Submit WhatsApp Group</a> Invites, and easily <a href= {`${domain}addgroup`}>Promote WhatsApp Group</a> Activities. 
+            Our platform allows you to <a href={`${baseUri}addgroup`} >Add WhatsApp Group Links</a>, 
+            <a href="/addgroup">Submit WhatsApp Group</a> Invites, and easily <a href= {`${baseUri}addgroup`}>Promote WhatsApp Group</a> Activities. 
             Use our Free WhatsApp Group Promo tools to increase your WhatsApp Group link visibility. 
-            Create WhatsApp Group Links, <span style={{ color: 'red' }}>Join WhatsApp Groups, and <a href= {`${domain}addgroup`}>Increase Group Members</a>.</span> 
+            Create WhatsApp Group Links, <span style={{ color: 'red' }}>Join WhatsApp Groups, and <a href= {`${baseUri}addgroup`}>Increase Group Members</a>.</span> 
           </p>
         </section>
       </div>
